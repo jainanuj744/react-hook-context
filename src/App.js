@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Family from './prop_drill/Family';
+import Family_context from './context_api/Family_context';
+import { FamilyContext } from './context_api/FamilyContext';
 
 function App() {
+
+  let familyInfo = {
+    familyName : "Jains",
+    onlyForParents : ()=>{
+        return "Info for Parents";
+    },
+    onlyForGrandChildren : ()=>{
+        return "Info for Grand Children";
+    }
+}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Family></Family>
     </div>
   );
 }
