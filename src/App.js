@@ -19,7 +19,10 @@ function App() {
 
   return (
     <div>
-    <Family></Family>
+    {/* <Family></Family> */}
+    <FamilyContext.Provider value={familyInfo}>
+      <Family_context></Family_context>
+    </FamilyContext.Provider>
     </div>
   );
 }
